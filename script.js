@@ -60,4 +60,10 @@ calculatorButtons.addEventListener("click", (e) => {
         mathToDisplay += ` ${button.innerText} `;
         updateResultsBar(mathToDisplay);
     }
+    else if(button.id == "equals"){
+            currentNumber = operate(window[equationType], Number(currentNumber), Number(nextNumber));
+            mathToDisplay = currentNumber.toString();
+            nextNumber = '';
+            updateResultsBar(mathToDisplay);
+    }
 });
